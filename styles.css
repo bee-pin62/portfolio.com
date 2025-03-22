@@ -1,0 +1,309 @@
+:root {
+    --primary-green: #2ecc71;
+    --secondary-green: #27ae60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 204, 113, 0.5); /* Semi-transparent green overlay */
+    z-index: -1; /* Send it to the back */
+}
+
+/* Navigation */
+nav {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--primary-green);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    background: var(--primary-green);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Pages */
+.page {
+    padding: 7rem 2rem 4rem; /* Adjusted for header and footer */
+    min-height: 100vh;
+    scroll-margin-top: 70px; /* Space for fixed header */
+    
+}
+
+
+.page.active {
+    display: block;
+}
+
+
+/* Home Section */
+#home {
+    position: relative; /* Allows for absolute positioning of the overlay */
+    padding: 5rem 2rem; /* Adjust padding for spacing */
+    text-align: center; /* Center the text */
+    background: linear-gradient(135deg, #e0f7e9, #2ecc71); /* Gradient background from light green to main green */
+    color: #333; /* Text color for better readability */
+}
+
+#home::before {
+    content: ''; /* Creates a pseudo-element for the overlay */
+    position: absolute; /* Position it absolutely within the home section */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(255, 255, 255, 0.3); /* Light white overlay for text readability */
+    z-index: -1; /* Send it to the back */
+}
+
+.profile-img {
+    width: 200px; /* Set width for the profile image */
+    height: 200px; /* Set height for the profile image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 5px solid #2ecc71; /* Green border around the image */
+    margin: 2rem 0; /* Space below the image */
+}
+
+h1 {
+    font-size: 2.5rem; /* Font size for the main heading */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+p {
+    font-size: 1.2rem; /* Font size for the paragraph */
+    max-width: 600px; /* Limit the width of the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+       
+    }
+}
+/* Projects Section Styles */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.project-box {
+    background: white;
+    border: 1px solid var(--primary-green);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.project-box h3 {
+    margin: 1rem;
+    color: var(--primary-green);
+}
+
+.project-box p {
+    margin: 0 1rem 1rem;
+    color: #333;
+}
+
+/* Resume Section Styles */
+.resume-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.resume-box {
+    flex: 1;
+}
+.resume-box:hover {
+    transform: scale(1.05);
+}
+.resume-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid var(--primary-green);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.language-levels {
+    flex: 1;
+}
+.language-levels :hover {
+transform: scale(1.05);
+}
+.language {
+    margin: 1rem 0;
+}
+
+.language span {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background: var(--primary-green);
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 20px; /* Center text vertically */
+    transition: width 0.3s ease;
+}
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--primary-green);
+    border-radius: 5px;
+}
+
+button {
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Comments Section */
+.comments {
+    margin: 2rem 0;
+}
+
+.comment {
+    background: #f1f1f1;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--primary-green);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    
+    bottom: 0;
+    width: 100%;
+}
+.nav-links a.active {
+    background: var(--primary-green);
+    color: white;
+    border-radius: 5px;
+}
+/* About Section Styles */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-green);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-img {
+        width: 200px;
+        height: 200px;
+    }
+}

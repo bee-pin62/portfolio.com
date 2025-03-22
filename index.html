@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="hamburger">☰</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="page active">
+      <img src="img/main.jpg" alt="Profile Photo" class="profile-img" />
+      <h1>Welcome to My Portfolio</h1>
+      <p>Web Developer & Computer Science Student</p>
+    </section>
+
+    <section id="about" class="page">
+      <div class="about-container">
+        <img src="img/work3.jpg" alt="About Me Photo" class="about-img" />
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            Driven and enthusiastic high school graduate with a deep passion for
+            computer science and a strong ambition to build a career in
+            technology. Offering a strong foundation in coding languages such as
+            HTML, CSS, and Python, along with basic graphic design skills. I am
+            eager to learn new skills and thrive in team environments, making me
+            a motivated and collaborative individual ready to take on new
+            challenges. Additionally, I have experience managing and organizing
+            events related to sports, demonstrating strong leadership and
+            organizational skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="page">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <div class="project-box">
+          <img src="img/proj1.jpg" alt="Project 1" class="project-img" />
+          <h3>Presentation on SDLC</h3>
+          <p>
+            The Software Development Life Cycle (SDLC) ensures high-quality software development
+            by following structured steps, including:
+            <p><b>Planning</b> – Defining
+            project scope, objectives, and feasibility. </p><p><b>Requirement Analysis</b> –
+            Gathering and analyzing user needs.</P><p><b> Design</b> – Creating system
+            architecture and design specifications.</p> <p><b> Implementation</b> – Writing
+            code and building the software.</p> <p> <b>Testing</b> – Identifying and fixing
+            bugs to ensure quality.</p> <p><b>Deployment</b> – Releasing the software for
+            users.</p> <p><b>Maintenance</b> – Updating and improving the software
+            post-release.</p> 
+          </p>
+        </div>
+        <div class="project-box">
+          <img src="img/project2.jpg" alt="Project 2" class="project-img" />
+          <h3>Building a Coffee website</h3>
+          <p>
+            For this project, I built a simple yet visually appealing coffee website using HTML, CSS, and beginner-level JavaScript. 
+            The website showcases a coffee shop's offerings, providing an interactive and user-friendly experience.
+            Key aspects of the project:
+
+<p><b>HTML</b> – Structured the webpage with semantic elements like headers, sections, and buttons.</p>
+
+<p><b>CSS</b> – Styled the website with colors, fonts, and layouts to create an attractive design.</p>
+
+<p><b>JavaScript</b> – Added basic interactivity, such as a menu toggle, smooth scrolling, and a simple order form validation.</p>
+<p>This project helped me practice front-end development skills and understand how different web technologies work together to build an engaging user experience.</p>
+          </p>
+        </div>
+        <div class="project-box">
+          <img src="img/project3.png" alt="Project 3" class="project-img" />
+          <h3>SQL</h3>
+          <p>
+            In this project, I worked with SQL to manage and manipulate databases efficiently. The focus was on structuring, querying, and maintaining data for better organization and retrieval.
+
+                  Key aspects of the project:
+
+<p><b>Database Design</b> – Created tables with proper relationships using primary and foreign keys.</p>
+
+<p><b>Data Insertion & Retrieval</b> – Used INSERT, SELECT, and JOIN queries to store and fetch data.</p>
+
+<p><b>Data Modification</b> – Updated and deleted records using UPDATE and DELETE commands.</p>
+
+<p><b>Optimization</b> – Implemented indexing and best practices for efficient query performance.</p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="page">
+      <h2>My Resume</h2>
+      <div class="resume-container">
+          <div class="resume-box">
+              <img src="img/resume.jpg" alt="Resume" class="resume-img">
+          </div>
+          <div class="language-levels">
+              <h3>Language Proficiency</h3>
+              <div class="language">
+                  <span>Nepali</span>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 100%;">100%</div>
+                  </div>
+              </div>
+              <div class="language">
+                  <span>English</span>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 75%;">75%</div>
+                  </div>
+              </div>
+              <div class="language">
+                  <span>Hindi</span>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 70%;">70%</div>
+                  </div>
+              </div>
+          
+          </div>
+      </div>
+  </section>
+
+    <section id="contact" class="page">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea rows="5" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="comments">
+        <h3>Comments</h3>
+        <div class="comments-container"></div>
+        <form id="comment-form">
+          <input type="text" placeholder="Your name" id="comment-name" />
+          <textarea placeholder="Your comment" id="comment-text"></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> BIPIN SHRESTHA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
